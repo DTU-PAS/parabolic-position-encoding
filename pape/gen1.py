@@ -1,0 +1,13 @@
+WIDTH = 304
+HEIGHT = 240
+
+MIN_BOX_DIAG = 30
+MIN_BOX_SIDE = 10
+
+SKIP_TIME_US = 500_000
+
+DATASET_NAME = "gen1"
+
+NUM_CLASSES = 2
+
+CLASS_NAMES = ["car", "pedestrian"]

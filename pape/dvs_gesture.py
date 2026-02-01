@@ -1,0 +1,8 @@
+DATASET_NAME = "dvs_gesture"
+
+HEIGHT = 128
+WIDTH = 128
+
+NUM_CLASSES = 11
+
+VALIDATION_USERS = {21, 22, 23}

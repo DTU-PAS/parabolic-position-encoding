@@ -1,0 +1,29 @@
+[package]
+edition = "2021"
+name = "spiking_patches"
+version = "1.0.0"
+
+[lib]
+# The name of the native library. This is the name which will be used in Python to import the
+# library (i.e. `import spiking_patches`). If you change this, you must also change the name of the
+# `#[pymodule]` in `src/lib.rs`.
+name = "spiking_patches"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+#
+# Downstream Rust code (including code in `bin/`, `examples/`, and `tests/`) will not be able
+# to `use spiking_patches;` unless the "rlib" or "lib" crate type is also included, e.g.:
+# crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib"]
+
+[features]
+# https://github.com/PyO3/pyo3/discussions/2271
+# https://pyo3.rs/latest/faq.html#i-cant-run-cargo-test-or-i-cant-build-in-a-cargo-workspace-im-having-linker-issues-like-symbol-not-found-or-undefined-reference-to-_pyexc_systemerror
+default = ["extension-module"]
+extension-module = []
+
+[dependencies]
+divrem = "1.0.0"
+ndarray = "0.15.6"
+numpy = "0.26.0"
+pyo3 = "0.26.0"
+rayon = "1.11.0"

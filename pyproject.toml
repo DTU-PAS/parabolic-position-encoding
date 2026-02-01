@@ -1,0 +1,85 @@
+[project]
+dependencies = [
+  "dataclasses-json>=0.6.7",
+  "ffmpeg-python>=0.2.0",
+  "h5py>=3.13.0",
+  "ipykernel>=6.29.5",
+  "lightning>=2.5.1.post0",
+  "matplotlib>=3.10.3",
+  "maturin>=1.8.6",
+  "numpy>=2.2.6",
+  "nvitop>=1.5.1",
+  "pandas>=2.3.0",
+  "patchelf>=0.17.2.4",
+  "pycocotools>=2.0.10",
+  "ruff>=0.14.14",
+  "scipy>=1.16.3",
+  "torch>=2.7.0",
+  "torchcodec==0.5",
+  "torchmetrics>=1.7.2",
+  "torchvision>=0.22.0",
+  "tqdm>=4.67.1",
+  "tyro>=0.9.32",
+  "wandb>=0.20.1",
+]
+description = "Parabolic Position Encoding."
+name = "pape"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "1.0.0"
+
+[build-system]
+build-backend = "maturin"
+requires = ["maturin>=1.8.6"]
+
+[tool.uv]
+cache-keys = [{file = "pyproject.toml"}, {file = "Cargo.toml"}, {file = "**/*.rs"}]
+
+[tool.ruff]
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".ruff_cache",
+  "dist",
+  ".vscode",
+  "poetry.lock",
+]
+
+indent-width = 4
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "auto"
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+ignore = [
+  # we want to enforce explicit string concatenation,
+  # so we disable this rule that would otherwise enforce implicit concatenation
+  "ISC003",
+]
+select = [
+  "B", # flake8-bugbear
+  "E", # pycodestyle
+  "F", # Pyflakes
+  "I", # isort
+  "ISC", # flake8-implicit-str-concat (used to disallow implicit string concatenation)
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.isort]
+force-single-line = true
+known-first-party = ["spiking_patches"]
+known-third-party = ["wandb"]
+
+[tool.ruff.lint.flake8-implicit-str-concat]
+allow-multiline = false

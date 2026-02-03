@@ -2,7 +2,7 @@
 
 ![Introduction figure.](static/intro.png)
 
-This is the official repository for the paper: **Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas**.
+This is the official repository for the paper: [**Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas**](https://arxiv.org/abs/2602.01418).
 
 See *pape/nn/positions/{pape,pape_ri}.py* if you are mainly interested in the code for PaPE and PaPE-RI. The rest of the code is related to the experiments in the paper.
 

@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Koo Øhrstrøm"
+  given-names: "Christoffer"
+  orcid: "https://orcid.org/0009-0002-4268-3770"
+title: "parabolic-position-encoding"
+version: 1.0.0
+date-released: 2026-02-03
+url: "https://github.com/DTU-PAS/parabolic-position-encoding"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Koo Øhrstrøm"
+    given-names: "Christoffer"
+    orcid: "https://orcid.org/0009-0002-4268-3770"
+  - family-names: "I. Cabral Muchacho"
+    given-names: "Rafael"
+    orcid: "https://orcid.org/0009-0001-7232-486X"
+  - family-names: "Dong"
+    given-names: "Yifei"
+    orcid: "https://orcid.org/0000-0002-1537-0640"
+  - family-names: "Moumtzidellis"
+    given-names: "Filippos"
+  - family-names: "Güldenring"
+    given-names: "Ronja"
+    orcid: "https://orcid.org/0000-0001-6430-7405"
+  - family-names: "T. Pokorny"
+    given-names: "Florian"
+    orcid: "https://orcid.org/0000-0003-1114-6040"
+  - family-names: "Nalpantidis"
+    given-names: "Lazaros"
+    orcid: "https://orcid.org/0000-0002-3620-4123"
+  doi: "10.48550/arXiv.2602.01418"
+  journal: "arXiv preprint arXiv:2510.26614"
+  month: 2
+  title: "Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas"
+  year: 2026

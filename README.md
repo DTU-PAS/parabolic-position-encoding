@@ -9,15 +9,13 @@ See *pape/nn/positions/{pape,pape_ri}.py* if you are mainly interested in the co
 **Citation**
 
 ``` bibtex
-@misc{ohrstrom2026pape,
-    title={Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas}, 
-    author={{O}hrstr{o}m, Christoffer Koo and Muchacho, Rafael I. Cabral and Dong, Yifei and
-    Moumtzidellis, Filippos and G{"u}ldenring, Ronja and Pokorny, Florian T. and
-    Nalpantidis, Lazaros},
-    year={2026},
-    eprint={2602.01418},
-    archivePrefix={arXiv},
-    url={https://arxiv.org/abs/2602.01418}, 
+@article{ohrstrom2026pape,
+author = {Koo Øhrstrøm, Christoffer and I. Cabral Muchacho, Rafael and Dong, Yifei and Moumtzidellis, Filippos and Güldenring, Ronja and T. Pokorny, Florian and Nalpantidis, Lazaros},
+doi = {10.48550/arXiv.2602.01418},
+journal = {arXiv preprint arXiv:2510.26614},
+month = feb,
+title = {{Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas}},
+year = {2026}
 }
 ```
 

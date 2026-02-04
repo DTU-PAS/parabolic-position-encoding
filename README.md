@@ -12,7 +12,7 @@ See *pape/nn/positions/{pape,pape_ri}.py* if you are mainly interested in the co
 @article{ohrstrom2026pape,
 author = {Koo Øhrstrøm, Christoffer and I. Cabral Muchacho, Rafael and Dong, Yifei and Moumtzidellis, Filippos and Güldenring, Ronja and T. Pokorny, Florian and Nalpantidis, Lazaros},
 doi = {10.48550/arXiv.2602.01418},
-journal = {arXiv preprint arXiv:2510.26614},
+journal = {arXiv preprint arXiv:2602.01418},
 month = feb,
 title = {{Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas}},
 year = {2026}

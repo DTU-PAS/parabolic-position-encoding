@@ -14,7 +14,7 @@ author = {Koo Øhrstrøm, Christoffer and I. Cabral Muchacho, Rafael and Dong, Y
 doi = {10.48550/arXiv.2602.01418},
 journal = {arXiv preprint arXiv:2602.01418},
 month = feb,
-title = {{Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas}},
+title = {Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas},
 year = {2026}
 }
 ```

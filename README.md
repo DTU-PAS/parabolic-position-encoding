@@ -46,7 +46,7 @@ We further log experiments (hyperparameters and learning curves) to [Weights & B
 
 ## Checkpoints
 
-We provide checkpoints for models trained with PapE. The checkpoints include the config and the weights of the model.
+We provide checkpoints for models trained with PaPE. The checkpoints include the config and the weights of the model.
 
 Download checkpoints [here](https://data.dtu.dk/articles/online_resource/Model_weights_for_Where_to_Attend_A_Principled_Vision-Centric_Position_Encoding_with_Parabolas_/32076279).
 

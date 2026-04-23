@@ -44,6 +44,42 @@ Model checkpoints will automatically be placed in *experiments*.
 
 We further log experiments (hyperparameters and learning curves) to [Weights & Biases](https://wandb.ai) and expect that your user has access to a project called "*parabolic-position-encoding*". Please create this project. You can change this in `pape/constants.py` if you want a different project name.
 
+## Checkpoints
+
+We provide checkpoints for models trained with PapE. The checkpoints include the config and the weights of the model.
+
+Download checkpoints [here](https://data.dtu.dk/articles/online_resource/Model_weights_for_Where_to_Attend_A_Principled_Vision-Centric_Position_Encoding_with_Parabolas_/32076279).
+
+Here is an example of how to load the ImageNet-1K checkpoint:
+
+```py
+import json
+from pathlib import Path
+
+import torch
+
+from pape.configs import Config
+from pape.nn.image_classifier import ImageClassifier
+
+dataset = "imagenet1k"
+checkpoint_dir = Path("checkpoints") / dataset
+config_path = checkpoint_dir / "config.json"
+config = Config.from_dict(json.loads(config_path.read_text()))
+model = ImageClassifier(config)
+state_dict = torch.load(checkpoint_dir / "model.pt")
+model.load_state_dict(state_dict)
+```
+
+The other models can be loaded as above, but make sure to substitute `ImageClassifier` for the corresponding network of the respective dataset:
+
+| Dataset     | Network                                    |
+| ----------- | ------------------------------------------ |
+| COCO        | `pape.nn.image_detector.ImageDetector`     |
+| DvsGesture  | `pape.nn.event_classifier.EventClassifier` |
+| GEN1        | `pape.nn.event_detector.EventDetector`     |
+| ImageNet-1K | `pape.nn.image_classifier.ImageClassifier` |
+| UCF101      | `pape.nn.video_classifier.VideoClassifier` |
+
 ## Training
 
 All datasets use the same entrypoint: *train.py*.

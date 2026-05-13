@@ -1,8 +1,8 @@
-# Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas
+# Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General
 
 ![Introduction figure.](static/intro.png)
 
-This is the official repository for the paper: [**Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas**](https://arxiv.org/abs/2602.01418).
+This is the official repository for the paper: [**Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General**](https://arxiv.org/abs/2602.01418).
 
 See *pape/nn/positions/{pape,pape_ri}.py* if you are mainly interested in the code for PaPE and PaPE-RI. The rest of the code is related to the experiments in the paper.
 
@@ -14,7 +14,7 @@ author = {Koo Øhrstrøm, Christoffer and I. Cabral Muchacho, Rafael and Dong, Y
 doi = {10.48550/arXiv.2602.01418},
 journal = {arXiv preprint arXiv:2602.01418},
 month = feb,
-title = {Where to Attend: A Principled Vision-Centric Position Encoding with Parabolas},
+title = {Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General},
 year = {2026}
 }
 ```

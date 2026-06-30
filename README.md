@@ -4,7 +4,7 @@
 
 This is the official repository for the paper: [**Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General**](https://arxiv.org/abs/2602.01418).
 
-See *pape/nn/positions/{pape,pape_ri}.py* if you are mainly interested in the code for PaPE and PaPE-RI. The rest of the code is related to the experiments in the paper.
+See *pape/nn/positions/{pape_naive,pape_efficient,pape_ri}.py* if you are mainly interested in the code for PaPE and PaPE-RI. The rest of the code is related to the experiments in the paper. Note that pape_naive.py and pape_efficient.py give equivalent results, but the latter is significantly faster. We provide the naive version as well because it is simpler and can be a good starting point for *understanding* PaPE, but we recommend using pape_efficient.py in your code.
 
 **Citation**
 

@@ -146,7 +146,10 @@ class ParabolicPositionEncoder(PositionEncoder):
         a_size, _ = self.ab_eval_split_sizes
         a_pre = ab[..., :a_size].reshape(B, S, H, M)
         b_part = ab[..., a_size:].reshape(B, S, H, P)
-        pos_contig = positions.contiguous()
+
+        # positions has a singleton batch dim (shared across the batch); expand (stride 0) rather
+        # than broadcast-copy it, since the kernel indexes it with the real batch size B.
+        pos_contig = positions.expand(B, S, P)
 
         Q_out = torch.zeros(B, H, S, D_OUT, dtype=query.dtype, device=query.device)
         K_out = torch.zeros(B, H, S, D_OUT, dtype=key.dtype, device=key.device)
@@ -632,7 +635,11 @@ def _pape_train_triton_backward(
 
     a_pre_c = a_pre.contiguous()
     b_pre_c = b_pre.contiguous()
-    pos_c = positions.contiguous()
+
+    # positions has a singleton batch dim (shared across the batch); expand (stride 0) rather
+    # than broadcast-copy it, since the kernel indexes it with the real batch size B.
+    pos_c = positions.expand(B, S, P)
+
     W_p_c = W_p_3d.contiguous()
     daug_q_c = daug_q.contiguous()
     daug_k_c = daug_k.contiguous()
@@ -718,7 +725,11 @@ def _pape_train_triton_forward(
 
     a_pre_c = a_pre.contiguous()
     b_pre_c = b_pre.contiguous()
-    pos_c = positions.contiguous()
+
+    # positions has a singleton batch dim (shared across the batch); expand (stride 0) rather
+    # than broadcast-copy it, since the kernel indexes it with the real batch size B.
+    pos_c = positions.expand(B, S, P)
+
     W_p_c = W_p_3d.contiguous()
 
     Q_out = torch.zeros(B, H, S, D_OUT, dtype=query.dtype, device=query.device)

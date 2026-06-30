@@ -22,6 +22,14 @@ def load_datamodule(config: Config) -> pl.LightningDataModule:
             from pape.data.imagenet.damodule import ImageNetDataModule
 
             return ImageNetDataModule(config)
+        case Dataset.imagenet_renditions:
+            from pape.data.imagenet_renditions.datamodule import ImageNetRenditionsDataModule
+
+            return ImageNetRenditionsDataModule(config)
+        case Dataset.imagenetv2:
+            from pape.data.imagenetv2.datamodule import ImageNetV2DataModule
+
+            return ImageNetV2DataModule(config)
         case Dataset.ucf101:
             from pape.data.ucf101.datamodule import UCF101DataModule
 

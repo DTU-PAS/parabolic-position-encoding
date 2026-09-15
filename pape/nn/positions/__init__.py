@@ -22,7 +22,7 @@ def get_position_encoder(config: Config) -> PositionEncoder:
 
             return NoPositionEncoder()
         case Positional.pape:
-            from .pape import ParabolicPositionEncoder
+            from .pape_efficient import ParabolicPositionEncoder
 
             return ParabolicPositionEncoder(config)
         case Positional.pape_ri:

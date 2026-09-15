@@ -6,7 +6,7 @@ from pape.configs import Dataset
 
 def load_model(config: Config, steps_per_epoch: int = -1) -> pl.LightningModule:
     match config.dataset:
-        case Dataset.imagenet:
+        case Dataset.imagenet | Dataset.imagenet_renditions | Dataset.imagenetv2:
             from pape.models.image_classification import ImageClassificationModel
 
             return ImageClassificationModel(config, steps_per_epoch=steps_per_epoch)

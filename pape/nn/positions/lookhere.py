@@ -27,7 +27,7 @@ class LookHerePositionEncoder(PositionEncoder):
     def __init__(self, config: Config):
         super().__init__()
 
-        if config.dataset not in (Dataset.imagenet, Dataset.coco):
+        if config.dataset not in (Dataset.imagenet, Dataset.coco, Dataset.imagenet_renditions, Dataset.imagenetv2):
             raise ValueError("LookHerePositionEncoder only supports image datasets.")
 
         if config.height != config.width:
@@ -36,7 +36,7 @@ class LookHerePositionEncoder(PositionEncoder):
         self.grid_size = math.ceil(config.height / config.patch_size)
         self.num_heads = config.model.num_heads
 
-        self.has_cls = config.dataset == Dataset.imagenet
+        self.has_cls = config.dataset in (Dataset.imagenet, Dataset.imagenet_renditions, Dataset.imagenetv2)
 
         # This corresponds to "LH_90_weights_and_config.pth" from the source repo.
         # See https://github.com/GreenCUBIC/lookhere/tree/main

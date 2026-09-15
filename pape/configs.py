@@ -17,6 +17,8 @@ class Dataset(enum.StrEnum):
     dvsgesture = "dvsgesture"
     gen1 = "gen1"
     imagenet = "imagenet"
+    imagenet_renditions = "imagenet_renditions"
+    imagenetv2 = "imagenetv2"
     ucf101 = "ucf101"
 
 
@@ -274,6 +276,12 @@ def load_dimensions(dataset: Dataset) -> tuple[int, int]:
         case Dataset.imagenet:
             from pape.imagenet import HEIGHT
             from pape.imagenet import WIDTH
+        case Dataset.imagenet_renditions:
+            from pape.imagenet_renditions import HEIGHT
+            from pape.imagenet_renditions import WIDTH
+        case Dataset.imagenetv2:
+            from pape.imagenetv2 import HEIGHT
+            from pape.imagenetv2 import WIDTH
         case Dataset.ucf101:
             from pape.ucf101 import HEIGHT
             from pape.ucf101 import WIDTH
@@ -293,6 +301,10 @@ def load_num_classes(dataset: Dataset) -> int:
             from pape.gen1 import NUM_CLASSES
         case Dataset.imagenet:
             from pape.imagenet import NUM_CLASSES
+        case Dataset.imagenet_renditions:
+            from pape.imagenet_renditions import NUM_CLASSES
+        case Dataset.imagenetv2:
+            from pape.imagenetv2 import NUM_CLASSES
         case Dataset.ucf101:
             from pape.ucf101 import NUM_CLASSES
         case _:
@@ -309,6 +321,10 @@ def load_num_positions(dataset: Dataset) -> int:
         case Dataset.gen1:
             return 3
         case Dataset.imagenet:
+            return 2
+        case Dataset.imagenet_renditions:
+            return 2
+        case Dataset.imagenetv2:
             return 2
         case Dataset.ucf101:
             return 3

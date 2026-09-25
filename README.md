@@ -1,21 +1,40 @@
-# Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General
+<p align="center">
+  <h2 align="center">Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General</h2>
+  <p align="center">
+    <a href="https://chrisohrstrom.github.io">Christoffer Koo Øhrstrøm</a><sup>1</sup>
+    <a href="https://scholar.google.com/citations?user=Gq3RAk8AAAAJ">Rafael I. Cabral Muchacho</a><sup>2</sup>
+    <a href="https://yifeidong0.github.io">Yifei Dong</a><sup>2</sup>
+    <a href="https://www.linkedin.com/in/filippos-moumtzidellis-a37818184">Filippos Moumtzidellis</a><sup>1</sup>
+    <a href="https://rgring.github.io">Ronja Güldenring</a><sup>1</sup>
+    <a href="https://florianpokorny.com">Florian T. Pokorny</a><sup>2</sup>
+    <a href="https://lanalpa.github.io/">Lazaros Nalpantidis</a><sup>1</sup>
+  </p>
+  <p align="center">
+    <sup>1</sup>Technical University of Denmark &nbsp;&nbsp;
+    <sup>2</sup>KTH Royal Institute of Technology<br/>
+    <b>NeurIPS 2026 Spotlight</b>
+  </p>
+  <p align="center">
+    <a href="https://arxiv.org/abs/2602.01418"><img src="https://img.shields.io/badge/Paper-arXiv-lightblue"></a>
+    <a href="https://chrisohrstrom.github.io/parabolic-position-encoding/"><img src="https://img.shields.io/badge/Project-Page-blue"></a>
+  </p>
+</p>
+
 
 ![Introduction figure.](static/intro.png)
 
-This is the official repository for the paper: [**Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General**](https://arxiv.org/abs/2602.01418).
+This is the official repository for the NeurIPS 2026 Spotlight paper: [**Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General**](https://arxiv.org/abs/2602.01418).
 
 See *pape/nn/positions/{pape_naive,pape_efficient,pape_ri}.py* if you are mainly interested in the code for PaPE and PaPE-RI. The rest of the code is related to the experiments in the paper. Note that pape_naive.py and pape_efficient.py give equivalent results, but the latter is significantly faster. We provide the naive version as well because it is simpler and can be a good starting point for *understanding* PaPE, but we recommend using pape_efficient.py in your code.
 
 **Citation**
 
 ``` bibtex
-@article{ohrstrom2026pape,
-author = {Øhrstrøm, Christoffer Koo and I. Cabral Muchacho, Rafael and Dong, Yifei and Moumtzidellis, Filippos and Güldenring, Ronja and T. Pokorny, Florian and Nalpantidis, Lazaros},
-doi = {10.48550/arXiv.2602.01418},
-journal = {arXiv preprint arXiv:2602.01418},
-month = feb,
-title = {Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General},
-year = {2026}
+@inproceedings{ohrstrom2026pape,
+    author = {Øhrstrøm, Christoffer Koo and I. Cabral Muchacho, Rafael and Dong, Yifei and Moumtzidellis, Filippos and Güldenring, Ronja and T. Pokorny, Florian and Nalpantidis, Lazaros},
+    title = {Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General},
+    booktitle = {Advances in {{Neural Information Processing Systems}}},
+    year = {2026}
 }
 ```
 

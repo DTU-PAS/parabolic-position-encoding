@@ -9,7 +9,7 @@ version: 1.0.0
 date-released: 2026-02-03
 url: "https://github.com/DTU-PAS/parabolic-position-encoding"
 preferred-citation:
-  type: article
+  type: conference-paper
   authors:
   - family-names: "Øhrstrøm"
     given-names: "Christoffer Koo"
@@ -31,8 +31,7 @@ preferred-citation:
   - family-names: "Nalpantidis"
     given-names: "Lazaros"
     orcid: "https://orcid.org/0000-0002-3620-4123"
-  doi: "10.48550/arXiv.2602.01418"
-  journal: "arXiv preprint arXiv:2602.01418"
-  month: 2
+  conference:
+    name: "Advances in Neural Information Processing Systems"
   title: "Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General"
   year: 2026

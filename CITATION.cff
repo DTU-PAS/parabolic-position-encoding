@@ -33,5 +33,5 @@ preferred-citation:
     orcid: "https://orcid.org/0000-0002-3620-4123"
   conference:
     name: "Advances in Neural Information Processing Systems"
-  title: "Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General"
+  title: "Parabolic Positional Encoding: A Vision-Centric, Principled, Extrapolatable, and General Approach"
   year: 2026
